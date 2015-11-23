@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var sqlite3 = require('sqlite3');
 var db = new sqlite3.Database('model/dal/serveurs.db');
 
-router.get('/test', function(req, res) {
+router.get('/isalive', function(req, res) {
 	var sum = (parseInt(req.headers['num1']) + parseInt(req.headers['num2']));
 	console.log('test server sum: '+sum);
 	res.header('sum', sum);
