@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 
 var routes = require('./routes/index');
-var serveurs = require('./routes/serveurs');
+var server = require('./routes/server');
 
 var app = express();
 app.use(bodyParser.json());
@@ -48,10 +48,11 @@ if (app.get('env') === 'development') {
 
 
 app.use('/', routes);-
-app.use('/serveurs', serveurs);
+app.use('/server', server);
 
-
-var server = app.listen(8000, '0.0.0.0');
+var port = 8001;
+var server = app.listen(port, '0.0.0.0');
+console.log('Access the server at : http://localhost:'+port);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
