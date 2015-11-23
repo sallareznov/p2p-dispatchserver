@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	container
+		row.col-md-8
+			
+			h1= message
+
+			p!=description
+
+			<hr>
+
+			pre #{error.stack}
+
+		row.col-md-4
+			img.center-block(src= "img/sadpanda.jpg").img-responsive

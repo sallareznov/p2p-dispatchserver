@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+
+.mainbg { 
+    background-image: url('../img/panda_bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right; 
+}

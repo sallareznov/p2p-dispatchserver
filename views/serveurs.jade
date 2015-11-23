@@ -1,0 +1,41 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		script(src='/js/bootstrap.min.js')
+	body.mainbg
+
+		container.col-md-8
+
+			h2 Les serveurs accessibles
+
+			table.table.table-hover.table-bordered
+				thead
+					tr
+						th Nom
+						th Adresse
+						th DateTime
+				each item in data
+					tr
+						td #{item.author}
+						td 
+							a(href=item.ip, target='_blank') #{item.ip}
+						td #{item.ctime}
+
+			br
+			h2 Ajoute tons serveur :
+
+			div
+				p Faites attention à respecter toutes les règles d'acceptation de votre serveur !
+
+				form(name="addServer", method="post")
+					div.input
+						input(type="text", name="author", placeholder="Quel est votre nom ?").form-control
+					br
+					div.input
+						input(type="text", name="ip", placeholder="Entrez l'ip de votre serveur").form-control
+					br
+					div.actions
+						input(type="submit", value="Ajoutez le serveur").btn.btn-success
