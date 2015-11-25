@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: 'Bienvenue sur le TP d ExpressJS et NodeJS'
+    title: "Bienvenue sur Panda Server !"
   });
 });
 
